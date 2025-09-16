@@ -1,3 +1,4 @@
+import { BASE_URL } from "@/constants/api";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
@@ -20,7 +21,7 @@ export async function GET(req: Request) {
       );
     }
 
-    const upstream = `https://api.nytimes.com/svc/archive/v1/${year}/${month}.json?api-key=${encodeURIComponent(
+    const upstream = `${BASE_URL}${year}/${month}.json?api-key=${encodeURIComponent(
       key
     )}`;
     const res = await fetch(upstream, { cache: "no-store" });

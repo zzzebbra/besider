@@ -7,7 +7,7 @@ import { useNewsFeed } from "@/lib/features/useNewsFeed";
 import styles from "./NewsList.module.css";
 import loading from "../../../public/loading.svg";
 
-// сколько показываем сначала и какая «порция» догружается
+// сколько показываем сначала и какая "порция" догружается
 const INITIAL_LIMIT = 20;
 const CHUNK = 20;
 
@@ -15,12 +15,12 @@ const CHUNK = 20;
 const MIN_APPEND_LATENCY_MS = 400;
 
 const NewsList = () => {
-  const [visible, setVisible] = useState(INITIAL_LIMIT);
+  const [isVisible, setIsVisible] = useState(INITIAL_LIMIT);
   const [isAppending, setIsAppending] = useState(false);
   const sentinelRef = useRef<HTMLDivElement | null>(null);
 
   const { grouped, isLoading, error, hasMore, totalAvailable } =
-    useNewsFeed(visible);
+    useNewsFeed(isVisible);
 
   const orderedDates = useMemo(
     () => Object.keys(grouped).sort((a, b) => (a < b ? 1 : -1)),
@@ -39,7 +39,7 @@ const NewsList = () => {
 
         setIsAppending(true);
         const t = setTimeout(() => {
-          setVisible((v) => Math.min(v + CHUNK, totalAvailable));
+          setIsVisible((v) => Math.min(v + CHUNK, totalAvailable));
           setIsAppending(false);
         }, MIN_APPEND_LATENCY_MS);
       },

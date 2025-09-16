@@ -7,11 +7,11 @@ import {
   sortDescByPubDate,
   safeCut,
 } from "./nytUtils";
-import { TNewsCard } from "@/types/nyt/types";
+import { NewsItem } from "@/types/common";
 import { useAppDispatch } from "@/lib/hooks";
 import { addSeenIds } from "./newsSlice";
 
-type Grouped = Record<string, TNewsCard[]>;
+type Grouped = Record<string, NewsItem[]>;
 
 export function useNewsFeed(limit = 20) {
   const dispatch = useAppDispatch();
@@ -20,7 +20,7 @@ export function useNewsFeed(limit = 20) {
     const now = new Date();
     return {
       year: now.getUTCFullYear(),
-      month: 1, // now.getUTCMonth() + 1,
+      month: 5, //now.getUTCMonth() + 1, - должно быть так, но у NYT в Archive API нет месяцев после мая, поэтому хардкодим май
     };
   }, []);
 

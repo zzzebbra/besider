@@ -1,6 +1,6 @@
-import { NYTDoc, TNewsCard } from "@/types/nyt/types";
+import { NYTDoc, NewsItem } from "@/types/common";
 
-export function normalizeDoc(doc: NYTDoc): TNewsCard {
+export function normalizeDoc(doc: NYTDoc): NewsItem {
   return {
     title: doc.headline.main,
     url: doc.web_url,
@@ -12,15 +12,15 @@ export function normalizeDoc(doc: NYTDoc): TNewsCard {
   };
 }
 
-export function groupByDay(items: TNewsCard[]) {
-  return items.reduce<Record<string, TNewsCard[]>>((acc, it) => {
+export function groupByDay(items: NewsItem[]) {
+  return items.reduce<Record<string, NewsItem[]>>((acc, it) => {
     const key = new Date(it.pub_date).toISOString().slice(0, 10);
     (acc[key] ||= []).push(it);
     return acc;
   }, {});
 }
 
-export function sortDescByPubDate(items: TNewsCard[]): TNewsCard[] {
+export function sortDescByPubDate(items: NewsItem[]): NewsItem[] {
   return [...items].sort(
     (a, b) => +new Date(b.pub_date) - +new Date(a.pub_date)
   );

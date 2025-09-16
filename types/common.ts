@@ -1,4 +1,8 @@
-export type TNewsCard = {
+type MultimediaItem = { url: string };
+
+type Headline = { main: string };
+
+export type NewsItem = {
   title: string;
   url: string;
   multimedia: string;
@@ -9,10 +13,10 @@ export type TNewsCard = {
 export type NYTDoc = {
   _id: string;
   web_url: string;
-  headline: { main: string };
+  headline: Headline;
   pub_date: string;
   source: string;
-  multimedia: Array<{ url: string }>;
+  multimedia: MultimediaItem[];
 };
 
 export type NYTArchiveResponse = {

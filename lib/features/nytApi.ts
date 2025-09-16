@@ -1,4 +1,4 @@
-import { NYTArchiveResponse, NYTDoc } from "@/types/nyt/types";
+import { NYTArchiveResponse, NYTDoc } from "@/types/common";
 
 export async function fetchArchive({
   year,

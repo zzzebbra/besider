@@ -1,11 +1,11 @@
 import React from "react";
-import { TNewsCard } from "@/types/nyt/types";
+import { NewsItem } from "@/types/common";
 import styles from "./NewsDay.module.css";
 import NewsCard from "../newscard/NewsCard";
 import { formatDayHeader, formatCardDateTime } from "@/lib/features/nytUtils";
 
 type NewsDayProps = {
-  cards: TNewsCard[];
+  cards: NewsItem[];
   date: string;
 };
 

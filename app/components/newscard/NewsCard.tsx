@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./NewsCard.module.css";
-import { TNewsCard } from "@/types/nyt/types";
+import { NewsItem } from "@/types/common";
 
-const NewsCard = ({ title, url, multimedia, pub_date, source }: TNewsCard) => {
+const NewsCard = ({ title, url, multimedia, pub_date, source }: NewsItem) => {
   return (
     <a
       href={url}
