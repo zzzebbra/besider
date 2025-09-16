@@ -1,0 +1,153 @@
+.container {
+  min-height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.topContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #ededed;
+}
+
+.siteTitle {
+  color: #000;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #000;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer__nav {
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.footer__creds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* .footer__text {
+  color: #000;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+} */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  position: relative;
+  width: 100%;
+  max-width: 768px;
+}
+
+.link {
+  color: #000;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.link.active {
+  text-decoration: underline;
+}
+
+.navlink {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.navlink:hover {
+  text-decoration: none;
+}
+
+.menuIcon,
+.closeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.menuButton,
+.closeButton {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+
+.menuButton:hover,
+.closeButton:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}

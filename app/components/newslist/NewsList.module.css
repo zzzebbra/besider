@@ -1,0 +1,24 @@
+.newsList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.appendSpinner {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 24px;
+}
+
+.loadingDots {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

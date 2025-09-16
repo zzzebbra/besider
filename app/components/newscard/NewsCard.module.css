@@ -1,0 +1,50 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid #ededed;
+}
+
+.card__source {
+  color: #096ffa;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin: 0;
+  margin-left: calc(40% + 12px);
+}
+
+.card__infoContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  align-items: flex-start;
+}
+
+.card__image {
+  max-width: 40%;
+}
+
+.card__text {
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0;
+}
+
+.card__pubDate {
+  color: #6d787a;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  margin-left: calc(40% + 12px);
+}
