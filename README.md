@@ -40,7 +40,7 @@
 
 ### **Backend**
 
-Api-ключ: rJ7XaUF0IQZG7UYu0jp85Mdqpeu5MnbP (Или можете создать свой в личном кабинете)
+Api-ключ: randomkey (Или можете создать свой в личном кабинете)
 
 Необходимый метод: https://api.nytimes.com/svc/archive/v1/{year}/{month}.json
 
